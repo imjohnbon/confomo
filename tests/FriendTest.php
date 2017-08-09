@@ -2,12 +2,14 @@
 
 use App\Conference;
 use App\Friend;
+use App\Jobs\FetchTwitterAvatar;
 use App\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Support\Facades\Bus;
 
-class FriendTest extends TestCase
+class FriendTest extends BrowserKitTestCase
 {
     use DatabaseMigrations;
 
